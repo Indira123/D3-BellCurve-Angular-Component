@@ -8,15 +8,11 @@ import { BellService } from './bell.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'bell';
   upperPoints: any = [];
   lowerPoints: any = [];
   upperX: any;
   lowerX: any;
-  private data: Array<object> = [];
-  constructor(private apiService: BellService) {
-
-}
+  constructor(private apiService: BellService) {}
 ngOnInit() {
   this.getBell();
 }
