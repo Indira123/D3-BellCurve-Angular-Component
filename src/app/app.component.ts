@@ -125,7 +125,7 @@ const lowerlimitline = D3.line()
             return y(lowerlimit);
         });
 
-const svg = D3.select('body').append('svg')
+const svg = D3.select('#bellChart').append('svg')
 .attr('width', width + margin.left + margin.right)
 .attr('height', height + margin.top + margin.bottom)
 .append('g')
@@ -211,7 +211,6 @@ svg.append('g')
 .call(D3.axisLeft(y));
 }
 ngAfterContentInit() {
- 
 }
 }
 
