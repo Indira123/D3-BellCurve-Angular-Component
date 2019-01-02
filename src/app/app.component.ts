@@ -1,14 +1,13 @@
-import { Component, OnInit, AfterContentInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as D3 from 'D3';
 import { BellService } from './bell.service';
-import { conditionallyCreateMapObjectLiteral } from '@angular/compiler/src/render3/view/util';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterContentInit {
+export class AppComponent implements OnInit {
   title = 'bell';
   upperPoints: any = [];
   lowerPoints: any = [];
@@ -209,8 +208,6 @@ svg.append('g')
 svg.append('g')
 .attr('class', 'y axis')
 .call(D3.axisLeft(y));
-}
-ngAfterContentInit() {
 }
 }
 
